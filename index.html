@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Encrypted Chat</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Encrypted Chat</h2>
+
+    <!-- Initial Choice -->
+    <div id="optionSection">
+      <button id="createBtn">New Chat Session</button>
+      <button id="joinBtn">Join Chat</button>
+    </div>
+
+    <!-- Create Section -->
+    <div id="createSection" style="display:none;">
+      <input type="text" id="createName" placeholder="Enter your name">
+      <input type="password" id="createPin" placeholder="Create secret pin">
+      <button id="createSubmit">Create</button>
+    </div>
+
+    <!-- Join Section -->
+    <div id="joinSection" style="display:none;">
+      <input type="text" id="joinName" placeholder="Enter your name">
+      <input type="password" id="joinPin" placeholder="Enter secret pin">
+      <button id="joinSubmit">Join</button>
+    </div>
+
+    <!-- Chat Section -->
+    <div id="chatSection" style="display:none;">
+      <h3 id="chatWith"></h3>
+      <div class="chat-box" id="chatBox"></div>
+
+      <!-- WhatsApp-style input row -->
+      <div class="input-row">
+        <input type="text" id="message" placeholder="Type a message...">
+        <label for="imageInput" class="image-btn">📎</label>
+        <input type="file" id="imageInput" style="display:none;">
+        <button id="send">➡️</button>
+      </div>
+
+      <!-- Preview container -->
+      <div id="previewContainer"></div>
+    </div>
+  </div>
+
+  <!-- Image Zoom Overlay -->
+  <div id="overlay" style="display:none;">
+    <span id="closeOverlay">&times;</span>
+    <img id="overlayImg" src="">
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
